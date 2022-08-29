@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="imageBox">
+            <div class="imageContainer">
+                <img src="./assets/images/odinLogo.png" />
+                <p class="imgText">ODIN</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="box1">
+                <p>This is not a real online service! You know you need something like this to help you realize your deepest dreams.
+                    <br> Sign up now to get started
+                </p>
+                <p>You know you want to!</p>
+            </div>
+            <form id="my-form" action="" class="box2">
+                <div class="inputWrapper">
+                    <h5>Let's do this!</h5>
+                    <div class="inputContent">
+                        <div class="inputBox">
+                            <label for="firstname">First Name</label>
+                            <input required type="text" class="firstname">
+                        </div>
+                        <div class="inputBox">
+                            <label for="lastname">Last Name</label>
+                            <input required type="text">
+                        </div>
+                    </div>
+                    <div class="inputContent">
+                        <div class="inputBox">
+                            <label for="email">Email</label>
+                            <input required type="email">
+                        </div>
+                        <div class="inputBox">
+                            <label for="number">Phone Number</label>
+                            <input required type="tel" pattern='[0-9]{3}-[0-9]{9}' id="phoneNo">
+                        </div>
+                    </div>
+                    <div class="inputContent">
+                        <div class="inputBox">
+                            <label for="password">Password</label>
+                            <input required type="password" class="password">
+                            <span class="error">*Password do not match</span>
+                        </div>
+                        <div class="inputBox">
+                            <label for="confirm password">Confirm Password</label>
+                            <input required type="password" class="conPassword">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <button type="submit">Create Account</button>
+                    <div class="wdth"></div>
+                    <div class="wdth1"></div>
+                </div>
+            </form>
+            <div class="box3">
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/js.js"></script>
+</body>
+
+</html>

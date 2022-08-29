@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* html {
+    font-size: 16px;
+} */
+
+@font-face {
+    font-family: Norse;
+    src: url(./Norse-Bold.otf);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.imageBox {
+    background-image: url("../images/odin.jpg");
+    background-size: cover;
+    flex: 2;
+    position: relative;
+}
+
+.imageContainer {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 160px;
+    top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageBox img {
+    width: 100px;
+}
+
+.imgText {
+    font-family: Norse;
+    color: #fff;
+    font-size: 6rem;
+}
+
+.contentBox {
+    flex: 3;
+    background: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+.box1 {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    max-width: 620px;
+}
+
+.box1 p:nth-of-type(2) {
+    margin-top: 15px;
+}
+
+.inputWrapper {
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 12%);
+    background: #FFFFFF;
+    padding: 12px 2rem;
+}
+
+.inputWrapper h5 {
+    color: #010101;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.inputContent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.inputBox label {
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.inputBox input {
+    padding: 5px 8px;
+    outline: none;
+    border: 0.5px solid rgba(29, 28, 28, 0.1);
+    border-radius: 5px;
+    height: 35px;
+    width: 270px;
+    font-size: .9rem;
+    margin-right: 10px;
+}
+
+.inputBox input:focus {
+    box-shadow: 0px 0px 0px 1px rgba(96, 130, 225, 0.5);
+    border: none;
+}
+
+.inputBox .phoneError {
+    color: red;
+    display: none;
+}
+
+.inputBox .error {
+    color: red;
+    display: none;
+}
+
+.inputBox input.invalid {
+    border-color: red;
+}
+
+.buttonContainer {
+    margin: 2rem;
+    position: relative;
+    width: max-content;
+    height: auto;
+    animation: fadeInUp 1s ease-out 3s forwards;
+}
+
+.buttonContainer button {
+    position: relative;
+    border: 1px solid #596D48;
+    color: #596D48;
+    background-color: transparent;
+    padding: 15px 35px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+    }
+}
+
+.wdth {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #596D48;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.wdth1 {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #596D48;
+    top: 0;
+    right: 0;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.buttonContainer:hover .wdth {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+
+.buttonContainer:hover .wdth1 {
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+}
+
+.buttonContainer:hover button {
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.box3 p {
+    padding: 0 2rem;
+}
+
+.box3 p a {
+    color: #596D48;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        display: block;
+    }
+    .imageBox {
+        display: none;
+    }
+    .contentBox {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../images/odin.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .box1 {
+        color: #fff;
+        padding-top: 15px;
+    }
+    .inputContent {
+        flex-direction: column;
+    }
+    input {
+        width: 84% !important;
+    }
+    .buttonContainer button {
+        color: #fff !important;
+        border: 1px solid #fff !important;
+    }
+    .box3 {
+        margin-bottom: 15px;
+    }
+    .box3 p {
+        color: #fff;
+    }
+    .box3 p a {
+        color: aqua;
+    }
+}
